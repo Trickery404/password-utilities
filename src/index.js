@@ -30,4 +30,8 @@ function generateStrongPassword(length = 12) {
   
     return isPasswordStrong;
   }
-  
+
+module.exports = {
+  isStrongPassword,
+  generateStrongPassword,
+};  
