@@ -1,22 +1,20 @@
 function generateStrongPassword(length = 12) {
-    const allowedPasswordCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
-  
-    let strongPassword = Array.from({ length }, () => {
+  const allowedPasswordCharacters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+
+  let strongPassword = "";
+
+  do {
+    strongPassword = Array.from({ length }, () => {
       const randomIndex = Math.floor(Math.random() * allowedPasswordCharacters.length);
-      return allowedPasswordCharacters.charAt(randomIndex);
-    }).join('');
-  
-    // Ensure the generated password meets strength requirements
-    while (!isStrongPassword(strongPassword)) {
-      strongPassword = Array.from({ length }, () => {
-        const randomIndex = Math.floor(Math.random() * allowedPasswordCharacters.length);
-        return allowedPasswordCharacters.charAt(randomIndex);
-      }).join('');
-    }
-  
-    return strongPassword;
-  }
-  
+      return allowedPasswordCharacters[randomIndex];
+    }).join("");
+  } while (!isStrongPassword(strongPassword));
+
+  return strongPassword;
+}
+ 
+ 
   function isStrongPassword(password) {
     if (password.length < 8) {
       return false;

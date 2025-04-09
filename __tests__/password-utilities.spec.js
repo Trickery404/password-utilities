@@ -12,18 +12,12 @@ describe("isStrongPassword", () => {
   });
 });
 
-describe("generateStrongPassword", () => {
-  test("generates a password of correct length", () => {
+describe("generateStrongPassword (fixed)", () => {
+  test("always returns a strong password of given length", () => {
     const length = 12;
     const pw = generateStrongPassword(length);
     expect(pw.length).toBe(length);
-  });
-
-  test("generated password meets strong criteria sometimes (not guaranteed yet)", () => {
-    const pw = generateStrongPassword(12);
-    // We won't expect it always to be strong at this point,
-    // just test that we get a string of length 12
-    expect(pw.length).toBe(12);
+    expect(isStrongPassword(pw)).toBe(true);
   });
 });
 
