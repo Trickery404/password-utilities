@@ -1,6 +1,6 @@
 // password-utilities.test.js
 
-const { generateStrongPassword, isStrongPassword } = require("../index");
+const { generateStrongPassword, isStrongPassword } = require("../src/index");
 
 describe("isStrongPassword", () => {
   test("returns false for a weak password like 'Hello World'", () => {
