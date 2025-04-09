@@ -1,0 +1,20 @@
+{
+  "name": "password-utilities",
+  "version": "0.1.0",
+  "description": "JS Library for Password Utilities",
+  "homepage": "https://github.com/Trickery404/password-utilities#readme",
+  "bugs": {
+    "url": "https://github.com/Trickery404/password-utilities/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trickery404/password-utilities.git"
+  },
+  "license": "MIT",
+  "author": "Yodirna, Trickery404",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
